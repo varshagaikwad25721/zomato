@@ -3,24 +3,41 @@ import './App.css';
 import Hotel from './component/Hotel';
 
 import Search from './component/Search';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+const Home = () => <h1> home page</h1>;
+const AddResto = () => <h1> Add Restaurant page</h1>;
+const Login = () => <h1> login page</h1>;
+const Sign = () => <h1> sign page</h1>;
 
 function App() {
   return (
+    
     <div>
+        <Router>
          <header>
      <div class="logo">
          <h1><i>Zomato</i></h1>
      </div>
      <nav>
          <ul>
-             <li><a href="#home">Add Restaurant</a></li>
+             {/* <li><a href="#addResto">Add Restaurant</a></li>
              <li><a href="#products">Login</a></li>
              <li><a href="#about">Sign Up</a></li>
-             <li><a href="#contact">Get the App</a></li>
+             <li><a href="#contact">Get the App</a></li> */}
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/AddResto">Add Restaurant</Link></li>
+                <li><Link to="/Login">Login</Link></li>
+                    <li><Link to="/Sign">Sign Up</Link></li>
          </ul>
      </nav>
  </header>
- 
+ <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/AddResto" element={<AddResto />} />
+                <Route path="/Login" element={<Login />} />
+                <Route path="/Sign" element={<Sign />} />
+            </Routes>
+ </Router>
 
  {/* <section id="home" class="hero">
     
