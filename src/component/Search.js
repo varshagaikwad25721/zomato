@@ -24,7 +24,7 @@ class search extends Component{
                         <input placeholder="Search for restaurant or a dish"
                         onChange={this.inputChange}/>  
                     </center>
-                    {/* <p>{this.state.userInput}</p>    */}
+                   
                 </center>
                 <hr/>
             </div>
